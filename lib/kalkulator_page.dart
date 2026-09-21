@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class KalkulatorPage extends StatefulWidget {
   const KalkulatorPage({super.key});
@@ -12,54 +13,122 @@ class _KalkulatorPageState extends State<KalkulatorPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Kalkulator Page")),
-      body: Column (
+      body: Column(
         children: [
-          Text("Kalkulator", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 56, 177, 60))),
-          //ini row
+          Text(
+            "Kalkulator",
+            style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              color: const Color.fromARGB(255, 56, 177, 60),
+            ),
+          ),
+
+          // ini row
           Row(
             children: [
-              //expanded didalam row
-              // digunankan jika widget yg digunakan blm diketahui ukuran isinya (textfield dll)
-              //fungsinya digunakan untuk membagi layar sesuai ukuran layar yg ada
+              // Input Angka 1
               Expanded(
-                child: TextField(decoration: InputDecoration(hintText: "Input Angka 1")),
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [
+                    FilteringTextInputFormatter.digitsOnly,
+                  ],
+                  decoration: InputDecoration(
+                    hintText: "Input Angka 1",
+                  ),
+                ),
               ),
-              const SizedBox(width: 15), //kasih space antara widget 1 dan 2
+
+              const SizedBox(width: 15),
+
+              // Input Angka 2
               Expanded(
-                child: TextField(decoration: InputDecoration(hintText: "Input Angka 2")),
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [
+                    FilteringTextInputFormatter.digitsOnly,
+                  ],
+                  decoration: InputDecoration(
+                    hintText: "Input Angka 2",
+                  ),
+                ),
               ),
             ],
           ),
-          
-          const SizedBox(height: 15), //kasih space antara row dan button
 
-          //row
+          const SizedBox(height: 15),
+
+          // row
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.red, foregroundColor: Colors.white),
-                onPressed: (){}, child: Text("+")),
-                const SizedBox(width: 10),
-              ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.purple, foregroundColor: Colors.white),
-                onPressed: (){}, child: Text("-")),
-                const SizedBox(width: 10),
-              ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.brown, foregroundColor: Colors.white),
-                onPressed: (){}, child: Text("*")),
-                const SizedBox(width: 10),
-              ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.black, foregroundColor: Colors.white),
-                onPressed: (){}, child: Text("/")),
-                const SizedBox(width: 10),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {},
+                child: Text("+"),
+              ),
+
+              const SizedBox(width: 10),
+
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.purple,
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {},
+                child: Text("-"),
+              ),
+
+              const SizedBox(width: 10),
+
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.brown,
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {},
+                child: Text("*"),
+              ),
+
+              const SizedBox(width: 10),
+
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {},
+                child: Text("/"),
+              ),
+
+              const SizedBox(width: 10),
             ],
           ),
-         
-         const SizedBox(height: 15), 
-           Text("Hasil : " , style: TextStyle(fontSize: 20)),
 
-           const SizedBox(height: 15), //kasih space antara row dan button
-          ElevatedButton( style: ElevatedButton.styleFrom(backgroundColor: Colors.blue, foregroundColor: Colors.white),
-            onPressed: (){}, child: Text("Reset")),
+          const SizedBox(height: 15),
+
+          Text(
+            "Hasil : ",
+            style: TextStyle(fontSize: 20),
+          ),
+
+          const SizedBox(height: 15),
+
+          // Reset
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () {},
+            child: Text("Reset"),
+          ),
         ],
-        ),
+      ),
     );
   }
 }
