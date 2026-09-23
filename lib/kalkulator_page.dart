@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 class KalkulatorPage extends StatefulWidget {
   const KalkulatorPage({super.key});
 
+  
   @override
   State<KalkulatorPage> createState() => _KalkulatorPageState();
 }
@@ -69,6 +70,7 @@ class _KalkulatorPageState extends State<KalkulatorPage> {
                   foregroundColor: Colors.white,
                 ),
                 onPressed: () {},
+                //panggil method tambah di controller
                 child: Text("+"),
               ),
 

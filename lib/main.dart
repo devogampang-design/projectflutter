@@ -1,7 +1,9 @@
 import 'package:firstproject/kalkulator_page.dart';
+import 'package:firstproject/pages/kalkulator_page1.dart';
 import 'package:firstproject/pages/login_clonepage.dart';
 import 'package:flutter/material.dart';
-import 'login_pagee.dart';
+import 'package:get/get.dart';
+import 'login_page.dart';
 import 'kalkulator_page.dart';
 import 'login_clone.dart';
 
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -38,8 +40,8 @@ class MyApp extends StatelessWidget {
      // home: LoginPage(),
       //home: KalkulatorPage(),
      // home: LoginClone(),
-     home:KalkulatorPage()
+     //home:LoginClonePage()
+     home:KalkulatorPage1()
     );
   }
 }
-
