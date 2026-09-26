@@ -3,6 +3,7 @@ import 'package:firstproject/pages/kalkulator_page1.dart';
 import 'package:firstproject/pages/login_clonepage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import 'login_page.dart';
 import 'kalkulator_page.dart';
 import 'login_clone.dart';
@@ -37,11 +38,11 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-     // home: LoginPage(),
+      // home: LoginPage(),
       //home: KalkulatorPage(),
-     // home: LoginClone(),
-     //home:LoginClonePage()
-     home:KalkulatorPage1()
+      // home: LoginClone(),
+      home: LoginClonePage(),
+      // home:KalkulatorPage1()
     );
   }
 }

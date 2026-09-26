@@ -17,7 +17,7 @@ void tambah(double angka1, double angka2){
 }
 void kurang(double angka1, double angka2){
   double hasilKurang = angka1 - angka2;
-  hasil.value = hasilKurang;
+  hasil.value = hasilKurang; 
    Get.snackbar(
       "hasil kurang",
       "hasilnya ${hasilKurang}",
