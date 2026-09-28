@@ -1,11 +1,12 @@
-import 'package:firstproject/kalkulator_page.dart';
+import 'package:firstproject/kalkulator_page09.dart';
 import 'package:firstproject/pages/kalkulator_page1.dart';
 import 'package:firstproject/pages/login_clonepage.dart';
+import 'package:firstproject/pages09/kalkulator_pagee.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'login_page.dart';
-import 'kalkulator_page.dart';
+import 'kalkulator_page09.dart';
 import 'login_clone.dart';
 
 void main() {
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
       // home: LoginPage(),
       //home: KalkulatorPage(),
       // home: LoginClone(),
-      home: LoginClonePage(),
+      home: KalkulatorPagee(),
       // home:KalkulatorPage1()
     );
   }
